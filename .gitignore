@@ -1,0 +1,5 @@
+.idea/
+token.pickle
+credentials.json
+document.json
+venv/
