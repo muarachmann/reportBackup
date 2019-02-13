@@ -5,4 +5,5 @@
 token.pickle
 credentials.json
 document.json
+venv/
 report-venv/
