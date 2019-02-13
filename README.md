@@ -1,12 +1,14 @@
 # reportBackup
 
+[![Build Status](https://travis-ci.com/muarachmann/reportBackup.svg?branch=master)](https://travis-ci.com/muarachmann/reportBackup)
+
 reportBackup is a tool for editing, and backing up your documents on the fly on google drive instantaneously. This was conceived mainly on the purpose having a way
 to backup files prior to internships, final year projects, thesis etc
 
 
 ## Clone and install
 
-Clone and install reportBackup
+Clone and install reportBackup<br>
 ```git clone https://github.com/muarachmann/reportBackup```
 
 
