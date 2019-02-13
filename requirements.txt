@@ -1,5 +1,5 @@
-google
-googleapiclient
+setuptools
+pip
 cachetools==3.0.0
 google-api-python-client==1.7.8
 google-api-python-client-helpers==1.2.4
