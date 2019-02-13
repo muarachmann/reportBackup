@@ -1,16 +1,24 @@
 from __future__ import print_function
 import pickle
-import os.path
+import os
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import json
+from dotenv import load_dotenv
+
+# getting modules
+from docs import report_backup_document
+
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/documents']
 
-# The ID of a sample document.
-DOCUMENT_ID = '1L5ZK9ia043t-6kmCJpkIcjU9eHLrBtf7wyAtwHsyJiU'
+# function to load evn files before app runs
+
+
+def load_env_file():
+    load_dotenv()
 
 
 def main():
@@ -39,7 +47,7 @@ def main():
     service = build('docs', 'v1', credentials=creds)
 
     # Retrieve the documents contents from the Docs service.
-    document = service.documents().get(documentId=DOCUMENT_ID).execute()
+    document = service.documents().get(documentId=os.getenv("GOOGLE_DOCUMENT_ID")).execute()
     text = 'rachmann'
     requests = [
         {
@@ -53,7 +61,7 @@ def main():
     ]
 
     result = service.documents().batchUpdate(
-        documentId=DOCUMENT_ID, body={'requests': requests}).execute()
+        documentId=os.getenv("GOOGLE_DOCUMENT_ID"), body={'requests': requests}).execute()
 
     # writing json output to document
     json_data = json.dumps(document, indent=4)
@@ -66,5 +74,12 @@ def main():
     print('Document written : {}'.format(document.get('title')))
 
 
+def test():
+    load_env_file()
+    heading_one , heading_two = report_backup_document.get_doc()
+    print(heading_one)
+    print(heading_two)
+
+
 if __name__ == '__main__':
-    main()
+    test()
