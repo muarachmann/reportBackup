@@ -16,7 +16,7 @@ Install requirements necessary for running reportBakup <br>
 ```cd reportBackup``` <br>
 ```pip install -r requirements.txt```
 
-Run reportBackup 
+Run reportBackup git
 ```pythion app.py```
 
 NB : add your googles drive document id to the ```.env``` file
