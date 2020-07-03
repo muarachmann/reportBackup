@@ -11,7 +11,7 @@ oauth2client==4.1.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 rsa==4.6
-six==1.12.0
+six==1.15.0
 uritemplate==3.0.0
 docx
 python-docx
