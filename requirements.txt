@@ -15,4 +15,4 @@ six==1.15.0
 uritemplate==3.0.1
 docx==0.2.4
 python-docx==0.8.10
-python-dotenv
+python-dotenv==0.13.0
