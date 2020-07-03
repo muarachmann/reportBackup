@@ -3,7 +3,7 @@ pip==20.1.1
 cachetools==4.1.1
 google-api-python-client==1.9.3
 google-api-python-client-helpers==1.2.6
-google-auth==1.6.2
+google-auth==1.18.0
 google-auth-httplib2==0.0.3
 google-auth-oauthlib==0.2.0
 httplib2==0.12.0
